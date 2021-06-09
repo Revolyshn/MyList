@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\brick"
   ],
-  "SelectedNode": "\\brick.sln",
+  "SelectedNode": "\\brick\\Brick.cs",
   "PreviewInSolutionExplorer": false
 }

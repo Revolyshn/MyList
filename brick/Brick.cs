@@ -117,32 +117,53 @@ namespace brick
 
 		}
 
-		public void InsertBefore(int index, T value)
+		public void InsertBefore(int index, Brick<T> NewBrick)
         { 
-
-        }
-
-		public void InsertAfter(int index, T value)
-        {
-
-        }
-
-		public Brick<T> PopFront()
-        {
+			Brick<T> brick = NewBrick;
 			Brick<T> Head = head;
-			Brick<T> remove;
-			for (int i = 0; i < 1; i++)
+			Brick<T> element;
+
+			
+			for (int i = 0; i < index - 1; i++)
 			{
 				Head = Head.next;
 			}
-			remove = Head.next;
-			Head = Head.prev;
-			Head.next = remove;
+
+			element = Head.next;
+			Head.next = brick;
+			brick.next = element;
+        }
+
+		public void InsertAfter(int index, Brick<T> NewBrick)
+        {
+			Brick<T> brick = NewBrick;
+			Brick<T> Head = head;
+			Brick<T> element;
+			for (int i = 0; i < index + 1; i++)
+			{
+				Head = Head.next;
+			}
+			element = Head.prev;
+			Head.next = brick;
+			brick.next = element;
+        }
+
+		public T PopFront()
+        {
+			T remove;
+			remove = head.value;
+			head = head.next;
+			head.prev = null;
 			return remove;
         }
 
-
-
-
+		public T PopBack()
+        {
+			T remove;
+			remove = tail.value;
+			tail = tail.prev;
+			tail.next = null;
+			return remove;
+        }
 	}
 }

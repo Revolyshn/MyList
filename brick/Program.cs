@@ -17,20 +17,23 @@ namespace brick
 			lst.Add(new Brick<int>(3));
 			lst.Add(new Brick<int>(4));
 			lst.Add(new Brick<int>(5));
+			lst.Add(new Brick<int>(6));
+			lst.Add(new Brick<int>(7));
+			lst.Add(new Brick<int>(8));
+			lst.Add(new Brick<int>(9));
+
 			lst.PushFront(new Brick<int>(100));
-
 			lst.PopFront();
-
-
-
 			lst.Print();
 
+			lst.InsertBefore(4,new Brick<int>(34));
+
+			Console.WriteLine();
 			lst.Remove(3);
 
 			lst.Print();
 
-
-			Console.ReadLine();
+			
 		}
 	}
 }
