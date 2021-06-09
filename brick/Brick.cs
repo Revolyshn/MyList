@@ -14,7 +14,13 @@ namespace brick
 
 		public Brick<T> prev;
 
-		public static int Count;
+		public int index = 0;
+
+		public void SetIndex(int index)
+        {
+			this.index = index;
+        }
+
 
 		public Brick(T value)
 		{
@@ -28,25 +34,30 @@ namespace brick
 		public Brick<T> head;
 		public Brick<T> tail;
 		public Brick<T> list;
+		public int index=0;
 
+
+		//Добавление элемента в список
 		public void Add(Brick<T> newBrick)
 		{
-			Brick<T>.Count++;
+
 			if (list != null)
 			{
+				index++;
+				GetLast().SetIndex(index);
 				GetLast().next = newBrick;
 				GetLast().prev = prev;
 				tail = GetLast();
 				prev = GetLast();
 				return;
 			}
-			
 			list = newBrick;
 			head = list;
 			prev = list;
 			tail = list;
 		}
 
+		//Добавление элемента в начало списка
 		public void PushFront(Brick<T> NewBrick)
 		{
 			Brick<T> brick = NewBrick;
@@ -66,6 +77,7 @@ namespace brick
 
 		}
 
+		//Вывод списка на консоль(В обратном порядке)
 		public void PrintBack()
 		{
 			Brick<T> Tail = tail;
@@ -77,6 +89,7 @@ namespace brick
 			Console.WriteLine();
 		}
 
+		//Вывод списка на консоль
 		public void Print()
 		{
 			Brick<T> Head = head;
@@ -87,5 +100,49 @@ namespace brick
 			}
 			Console.WriteLine();
 		}
+
+		//Удаление по элемента по айдишнику
+		public void Remove(int index)
+		{
+			Brick<T> Head = head;
+			Brick<T> rmv;
+			for (int i = 0; i < index; i++)
+			{
+				Head = Head.next;
+			}
+
+			rmv = Head.next;
+			Head = Head.prev;
+			Head.next = rmv;
+
+		}
+
+		public void InsertBefore(int index, T value)
+        { 
+
+        }
+
+		public void InsertAfter(int index, T value)
+        {
+
+        }
+
+		public Brick<T> PopFront()
+        {
+			Brick<T> Head = head;
+			Brick<T> remove;
+			for (int i = 0; i < 1; i++)
+			{
+				Head = Head.next;
+			}
+			remove = Head.next;
+			Head = Head.prev;
+			Head.next = remove;
+			return remove;
+        }
+
+
+
+
 	}
 }

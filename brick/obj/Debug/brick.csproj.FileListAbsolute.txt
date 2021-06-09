@@ -5,3 +5,10 @@ C:\Users\student\source\repos\brick\brick\obj\Debug\brick.csprojAssemblyReferenc
 C:\Users\student\source\repos\brick\brick\obj\Debug\brick.csproj.CoreCompileInputs.cache
 C:\Users\student\source\repos\brick\brick\obj\Debug\brick.exe
 C:\Users\student\source\repos\brick\brick\obj\Debug\brick.pdb
+C:\Users\Даниил\Source\Repos\MyList\brick\bin\Debug\brick.exe.config
+C:\Users\Даниил\Source\Repos\MyList\brick\bin\Debug\brick.exe
+C:\Users\Даниил\Source\Repos\MyList\brick\bin\Debug\brick.pdb
+C:\Users\Даниил\Source\Repos\MyList\brick\obj\Debug\brick.csproj.AssemblyReference.cache
+C:\Users\Даниил\Source\Repos\MyList\brick\obj\Debug\brick.csproj.CoreCompileInputs.cache
+C:\Users\Даниил\Source\Repos\MyList\brick\obj\Debug\brick.exe
+C:\Users\Даниил\Source\Repos\MyList\brick\obj\Debug\brick.pdb

@@ -11,16 +11,25 @@ namespace brick
 		static void Main(string[] args)
 		{
 			MyList<int> lst = new MyList<int>();
+
 			lst.Add(new Brick<int>(1));
-			lst.Add(new Brick<int>(2));
 			lst.Add(new Brick<int>(2));
 			lst.Add(new Brick<int>(3));
 			lst.Add(new Brick<int>(4));
 			lst.Add(new Brick<int>(5));
 			lst.PushFront(new Brick<int>(100));
-			
+
+			lst.PopFront();
+
+
+
 			lst.Print();
-			lst.PrintBack();
+
+			lst.Remove(3);
+
+			lst.Print();
+
+
 			Console.ReadLine();
 		}
 	}
